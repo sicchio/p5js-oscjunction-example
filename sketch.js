@@ -18,7 +18,8 @@ function fail(errorMessage) {
 
 function setup() {
   createCanvas(400, 400);
-  OSCjunction.connect("node-1", connectNodeSuccess, fail)
+  OSCjunction.connect("node-1", connectNodeSuccess, fail);
+  background(255);
 }
 
 function draw() {
