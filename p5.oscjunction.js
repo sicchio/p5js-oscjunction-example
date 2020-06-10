@@ -66,6 +66,15 @@ OSCjunction = (function() {
          	fail(msg.msg);       	
         });
 
+        let rtt = undefined;
+        socket.on("oscjPong", function(msg) {
+        	rtt = (new Date()).getTime() - msg.time;
+        });
+
+        window.setInterval(function() {
+        	socket.emit('oscjPing', {time: new Date().getTime(), rtt: rtt});
+        }, 2000);
+
         window.addEventListener('beforeunload', function() {
         	socket.emit("bye", {});
         });
