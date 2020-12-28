@@ -27,7 +27,7 @@ function draw() {
     fill(0);
     ellipse(mouseX, mouseY, 20, 20);
     if(junction !== undefined && junction.connected) {
-      junction.send("/mouse", [mouseX / width, mouseY / height]);
+     // junction.send("/mouse", [mouseX / width, mouseY / height]);
 	     junction.send("/mouse", [1]);
     }
   }
