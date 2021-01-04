@@ -27,9 +27,9 @@ function draw() {
     fill(0);
     ellipse(mouseX, mouseY, 20, 20);
     if(junction !== undefined && junction.connected) {
-     //junction.send("/mouse", [mouseX / width, mouseY / height]);
-	     junction.send("/outputs/digital/16", [1]);
-	    console.log("send osc on:" );
+     junction.send("/mouse", [mouseX / width, mouseY / height]);
+	    // junction.send("/outputs/digital/16", [1]);
+	    console.log("send osc on:" +mouseX / width, mouseY / height);
     }
   }
 }
