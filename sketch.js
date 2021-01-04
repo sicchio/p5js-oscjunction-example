@@ -29,7 +29,7 @@ function draw() {
     if(junction !== undefined && junction.connected) {
      // junction.send("/mouse", [mouseX / width, mouseY / height]);
 	     junction.send("/outputs/digital/16", [1]);
-	    console.log("send osc on:" /outputs/digital/16 );
+	    console.log("send osc on:" "/outputs/digital/16" );
     }
   }
 }
